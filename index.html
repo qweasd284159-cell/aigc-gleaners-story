@@ -56,45 +56,21 @@
       color: #92400e;
       border-color: #fde68a;
     }
-    /* 影片視窗：自動遮蔽上方工具列並提亮暗部細節 */
+    /* 原生滿版高畫質播放容器 */
     .video-wrapper {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
+      width: 100%;
       border-radius: 14px;
       overflow: hidden;
       background: #000000;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
       margin-top: 16px;
-      margin-bottom: 14px;
+      margin-bottom: 24px;
     }
-    .video-wrapper iframe {
-      position: absolute;
-      top: -56px;
-      left: 0;
+    video {
       width: 100%;
-      height: calc(100% + 56px);
-      border: 0;
-      filter: brightness(1.15) contrast(1.08); /* 提升暗部通透度 */
-    }
-    .btn-drive {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      background: #f1f5f9;
-      border: 1px solid #cbd5e1;
-      color: #1e293b;
-      font-size: 0.88rem;
-      font-weight: 600;
-      text-decoration: none;
-      padding: 10px 16px;
-      border-radius: 10px;
-      margin-bottom: 22px;
-      transition: background 0.15s;
-    }
-    .btn-drive:active {
-      background: #e2e8f0;
+      height: auto;
+      display: block;
+      border-radius: 14px;
     }
     .section-title {
       font-size: 1rem;
@@ -141,14 +117,13 @@
       </div>
     </div>
 
-    <!-- 影片播放區（遮罩 + 提亮） -->
+    <!-- 原生 HTML5 播放器：直接讀取 GitHub Release 原片 -->
     <div class="video-wrapper">
-      <iframe src="https://drive.google.com/file/d/1M2hFBcGcFM8-XKMZc1ge1mjr9flRJbdL/preview" allow="autoplay"></iframe>
+      <video controls playsinline preload="metadata">
+        <source src="https://github.com/qweasd284159-cell/aigc-gleaners-story/releases/download/V1.0/Made.with.FlexClip.mp4" type="video/mp4">
+        您的瀏覽器不支援此影音標籤。
+      </video>
     </div>
-    
-    <a href="https://drive.google.com/file/d/1M2hFBcGcFM8-XKMZc1ge1mjr9flRJbdL/view?usp=sharing" target="_blank" class="btn-drive">
-      🎬 點此以原生高畫質開啟全螢幕
-    </a>
 
     <div class="section-title">📌 專案簡介</div>
     <p class="intro">
