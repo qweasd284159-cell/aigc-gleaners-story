@@ -5,43 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AIGC 作品集：《拾穗》名畫故事</title>
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #0f172a;
-      color: #f8fafc;
+    * {
+      box-sizing: border-box;
       margin: 0;
-      padding: 16px;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: #f8fafc;
+      color: #334155;
+      padding: 20px 16px;
       display: flex;
       justify-content: center;
     }
-    .card {
+    .container {
       max-width: 680px;
       width: 100%;
-      background: #1e293b;
+      background: #ffffff;
       padding: 24px;
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-    }
-    h2 { color: #f59e0b; margin-top: 0; font-size: 1.4rem; }
-    .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px; }
-    .badge {
-      background: #334155;
-      color: #94a3b8;
-      padding: 4px 10px;
       border-radius: 20px;
-      font-size: 0.75rem;
-      font-weight: 600;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+      border: 1px solid #e2e8f0;
     }
-    .video-container {
+    .header {
+      margin-bottom: 18px;
+    }
+    h1 {
+      color: #0f172a;
+      font-size: 1.45rem;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .badge {
+      background: #f1f5f9;
+      color: #475569;
+      font-size: 0.78rem;
+      padding: 5px 12px;
+      border-radius: 9999px;
+      font-weight: 600;
+      border: 1px solid #e2e8f0;
+    }
+    .badge-highlight {
+      background: #fef3c7;
+      color: #92400e;
+      border-color: #fde68a;
+    }
+    .video-wrapper {
       position: relative;
       padding-bottom: 56.25%;
       height: 0;
+      border-radius: 12px;
       overflow: hidden;
-      border-radius: 10px;
       background: #000;
-      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-top: 14px;
+      margin-bottom: 12px;
     }
-    .video-container iframe {
+    .video-wrapper iframe {
       position: absolute;
       top: 0;
       left: 0;
@@ -49,31 +75,96 @@
       height: 100%;
       border: 0;
     }
-    p { line-height: 1.6; color: #cbd5e1; font-size: 0.95rem; }
-    ul { color: #cbd5e1; font-size: 0.9rem; padding-left: 20px; line-height: 1.7; }
+    .btn-drive {
+      display: block;
+      text-align: center;
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      color: #1e293b;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 9px 16px;
+      border-radius: 10px;
+      margin-bottom: 22px;
+      transition: background 0.2s;
+    }
+    .btn-drive:active {
+      background: #e2e8f0;
+    }
+    .section-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-top: 20px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    p.intro {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #475569;
+    }
+    .workflow-list {
+      list-style: none;
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .workflow-item {
+      background: #f8fafc;
+      padding: 12px 16px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      border: 1px solid #e2e8f0;
+      color: #334155;
+    }
+    .workflow-item b {
+      color: #0f172a;
+    }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h2>🌾 AIGC 數位敘事：《拾穗》名畫故事</h2>
-    <div class="tags">
-      <span class="badge">Google Veo</span>
-      <span class="badge">即夢 AI</span>
-      <span class="badge">FlexClip</span>
-      <span class="badge">AI 語音合成</span>
-    </div>
-    
-    <div class="video-container">
-      <iframe src="https://drive.google.com/file/d/1M2hFBcGcFM8-XKMZc1ge1mjr9flRJbdL/preview" allow="autoplay"></iframe>
+  <div class="container">
+    <div class="header">
+      <h1>🌾 AIGC 數位敘事：《拾穗》名畫故事</h1>
+      <div class="tags">
+        <span class="badge badge-highlight">生成式影音</span>
+        <span class="badge">Google Veo</span>
+        <span class="badge">即夢 AI</span>
+        <span class="badge">FlexClip</span>
+      </div>
     </div>
 
-    <p><b>專案簡介：</b>本專案為生成式 AI 多模態創作實作，將十九世紀米勒的經典寫實名畫《拾穗》結合聖經《路德記》歷史典故，透過動態生成、圖像延伸與影音剪輯打造完整的歷史敘事短片。</p>
+    <!-- 影片播放區 -->
+    <div class="video-wrapper">
+      <iframe src="https://drive.google.com/file/d/1M2hFBcGcFM8-XKMZc1ge1mjr9flRJbdL/preview" allow="autoplay"></iframe>
+    </div>
     
-    <p><b>AIGC 工作流說明：</b></p>
-    <ul>
-      <li><b>人物動態生成</b>：使用 Google Veo 賦予油畫人物細膩動作與麥浪微風。</li>
-      <li><b>歷史場景延伸</b>：利用即夢 AI 還原伯利恆麥田與人物互動畫面。</li>
-      <li><b>影音整合後製</b>：採用 FlexClip 進行 AI 旁白配音、智慧字幕生成與轉場剪輯。</li>
+    <a href="https://drive.google.com/file/d/1M2hFBcGcFM8-XKMZc1ge1mjr9flRJbdL/view?usp=sharing" target="_blank" class="btn-drive">
+      ↗ 如需最佳高畫質，可點此在 Google 雲端開啟
+    </a>
+
+    <div class="section-title">📌 專案簡介</div>
+    <p class="intro">
+      本專案為生成式 AI 多模態創作實作，將十九世紀米勒的經典寫實名畫《拾穗》結合聖經《路德記》歷史典故，透過動態生成、圖像延伸與影音剪輯打造完整的歷史敘事短片。
+    </p>
+
+    <div class="section-title">🛠️ AIGC 工作流說明</div>
+    <ul class="workflow-list">
+      <li class="workflow-item">
+        <b>1. 人物動態生成</b>：使用 Google Veo 賦予油畫人物細膩動作與麥浪微風，打破靜態畫面限制。
+      </li>
+      <li class="workflow-item">
+        <b>2. 歷史場景延伸</b>：利用即夢 AI 還原伯利恆麥田與人物互動畫面，擴展敘事鏡頭。
+      </li>
+      <li class="workflow-item">
+        <b>3. 影音整合後製</b>：採用 FlexClip 進行 AI 旁白配音、智慧字幕生成與情緒配樂轉場剪輯。
+      </li>
     </ul>
   </div>
 </body>
