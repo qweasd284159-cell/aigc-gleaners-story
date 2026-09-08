@@ -56,7 +56,7 @@
       color: #92400e;
       border-color: #fde68a;
     }
-    /* 遮罩裁切容器：自動切除 Google 頂部橫桿與白線 */
+    /* 影片視窗：自動遮蔽上方工具列並提亮暗部細節 */
     .video-wrapper {
       position: relative;
       padding-bottom: 56.25%;
@@ -75,6 +75,7 @@
       width: 100%;
       height: calc(100% + 56px);
       border: 0;
+      filter: brightness(1.15) contrast(1.08); /* 提升暗部通透度 */
     }
     .btn-drive {
       display: flex;
@@ -90,6 +91,7 @@
       padding: 10px 16px;
       border-radius: 10px;
       margin-bottom: 22px;
+      transition: background 0.15s;
     }
     .btn-drive:active {
       background: #e2e8f0;
@@ -139,13 +141,13 @@
       </div>
     </div>
 
-    <!-- 影片播放區（套用自動去橫桿遮罩） -->
+    <!-- 影片播放區（遮罩 + 提亮） -->
     <div class="video-wrapper">
       <iframe src="https://drive.google.com/file/d/1M2hFBcGcFM8-XKMZc1ge1mjr9flRJbdL/preview" allow="autoplay"></iframe>
     </div>
     
     <a href="https://drive.google.com/file/d/1M2hFBcGcFM8-XKMZc1ge1mjr9flRJbdL/view?usp=sharing" target="_blank" class="btn-drive">
-      🎬 點此啟動全螢幕高畫質播放
+      🎬 點此以原生高畫質開啟全螢幕
     </a>
 
     <div class="section-title">📌 專案簡介</div>
